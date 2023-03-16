@@ -1,7 +1,7 @@
 var minuscules = "abcdefghijklmnopqrstuvwxyz"
 var majuscules = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var nombres = "0123456789"
-var CaracteresSpéciaux = "&~#([-|`\_^@)]°<>¨$£¤%ù?!§/,;:*µ{}²"  
+var CaracteresSpéciaux = "&~#([-|`_^@)]°>¨$£¤%ù?!§/,;:*µ{}²"  
 
 var min = document.querySelector('#Minuscules')
 var maj = document.querySelector('#Majuscules')
