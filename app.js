@@ -40,7 +40,7 @@ function genMdp(){
         var mdp = ""
         var chaine = genTab()
             for (var j = 0; j < nbChar.options[nbChar.selectedIndex].value; j++){
-                var random = Math.floor(Math.random()* (chaine.length - 0) + 0)
+                var random = Math.floor(Math.random()* (chaine.length - 0)) + 0
                 mdp += chaine[random]
             }
             var p = document.createElement('li')
