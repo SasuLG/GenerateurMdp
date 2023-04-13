@@ -80,24 +80,3 @@ function reset(){
         element.remove()
     });
 }
-
-
-
-//    h.setAttribute('hidden', 'hidden')
-
-/*
-var input = document.querySelectorAll('input')
-console.log(input)
-var button = document.querySelector('#gen')
-button.onclick = ()=> input.forEach(isChecked)
-function isChecked(elt){
-    console.log(elt)
-    if (elt.checked){
-        i++
-    }else{
-        console.log('non')
-    }
-}
-*/
-
-
