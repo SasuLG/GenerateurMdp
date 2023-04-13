@@ -1,7 +1,7 @@
 var minuscules = "abcdefghijklmnopqrstuvwxyz"
 var majuscules = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var nombres = "0123456789"
-var CaracteresSpéciaux = "&~#([-|`\_^@)]°<>¨$£¤%ù?!§/,;:*µ{}²"  
+var CaracteresSpéciaux = "&~#([-|`_^@)]°>¨$£¤%ù?!§/,;:*µ{}²"  
 
 var min = document.querySelector('#Minuscules')
 var maj = document.querySelector('#Majuscules')
@@ -13,6 +13,24 @@ var nbMdp = document.querySelector('#NombresDeMotDePasses')
 var button = document.querySelector('#gen')
 
 var texte = document.querySelector('#nbM')
+
+var k
+function build(e, nb, s){
+    for(k = 1; k < nb; k++){
+        var opt = document.createElement('option')
+        opt.value = k
+        opt.innerHTML = k
+        if (k == s){
+            opt.selected = true
+        }
+        e.appendChild(opt)
+    } 
+
+}
+build(nbChar, 1000,14)
+build(nbMdp, 1000, 1)
+
+
 
 min.checked = true;
 button.onclick = ()=> genMdp()
@@ -40,7 +58,7 @@ function genMdp(){
         var mdp = ""
         var chaine = genTab()
             for (var j = 0; j < nbChar.options[nbChar.selectedIndex].value; j++){
-                var random = Math.floor(Math.random()* (chaine.length - 0) + 0)
+                var random = Math.floor(Math.random()* (chaine.length - 0)) + 0
                 mdp += chaine[random]
             }
             var p = document.createElement('li')
